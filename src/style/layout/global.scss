@@ -1,15 +1,62 @@
 @use "../abstracts" as *;
 html {
   scroll-behavior: smooth;
+  scrollbar-width: thin;
+  scrollbar-color: var(--colors-violet) #49566d2a;
   @include screen(tx) {
     font-size: 1.2rem;
   }
 }
+::-webkit-scrollbar {
+  max-width: 10px;
+  border-radius: 0px;
+  &-track {
+    box-shadow: inset 0 0 5px rgba(#49566d, 0.3);
+    border-radius: 7px;
+  }
+  &-thumb {
+    background: linear-gradient(
+      135deg,
+      var(--colors-purple) 0%,
+      var(--colors-violet) 49.21%,
+      var(--colors-orange) 100%
+    );
+    border-radius: 10px;
+    &:hover {
+      background: var(--colors-purple);
+    }
+  }
+}
+:focus {
+  outline-color: var(--colors-violet);
+}
 body {
   background-color: var(--colors-cream-white);
+  position: relative;
 }
 main {
-  min-height: calc(100vh - 409px);
+  min-height: calc(100vh - 358px);
+}
+.content {
+  header,
+  section,
+  footer {
+    display: block !important;
+  }
+}
+.loading-intro {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  &__container {
+    width: inherit;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 a.logo {
   line-height: 0;

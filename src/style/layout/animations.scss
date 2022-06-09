@@ -1,0 +1,99 @@
+@use "../abstracts" as *;
+// Animations
+// Fading in
+.anim {
+  animation: fadeIn 2s forwards;
+  .fade-in {
+    opacity: 0;
+    animation: fadeIn 0.5s ease-in forwards;
+  }
+  .fade-in-left {
+    position: relative;
+    animation: fadeInLeft 0.5s forwards;
+  }
+  .fade-in-left-ln {
+    position: relative;
+    animation: fadeInLeft 0.5s ease-in forwards;
+  }
+  .fade-in-right {
+    position: relative;
+    animation: fadeInRight 0.5s forwards;
+  }
+  .fade-in-right-ln {
+    position: relative;
+    animation: fadeInRight 0.5s ease-in forwards;
+  }
+  .fade-in-left-sp {
+    animation: fadeInLeftSp 0.5s ease-in forwards;
+  }
+}
+@keyframes fadeIn {
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes fadeInLeft {
+  0% {
+    left: -50%;
+    opacity: 0;
+  }
+  100% {
+    left: 0;
+    opacity: 1;
+  }
+}
+@keyframes fadeInRight {
+  0% {
+    right: -50%;
+    opacity: 0;
+  }
+  100% {
+    right: 0;
+    opacity: 1;
+  }
+}
+@keyframes fadeInLeftSp {
+  0% {
+    left: 0;
+    opacity: 0;
+  }
+  100% {
+    left: 50%;
+    opacity: 1;
+  }
+}
+@include screen(xl) {
+  @keyframes fadeInLeftSp {
+    0% {
+      left: 0;
+    }
+    100% {
+      left: em(123);
+    }
+  }
+}
+// Zooming in
+%int-zoom-in {
+  transform: scale(0);
+  opacity: 0;
+}
+.anim {
+  .zoom-in {
+    @extend %int-zoom-in;
+    animation: zoomIn 0.7s forwards;
+  }
+  .zoom-in-2 {
+    @extend %int-zoom-in;
+    animation: zoomIn 0.7s 0.5s forwards;
+  }
+  .zoom-in-3 {
+    @extend %int-zoom-in;
+    animation: zoomIn 0.7s 0.9s forwards;
+  }
+}
+@keyframes zoomIn {
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
