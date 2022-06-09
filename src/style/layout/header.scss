@@ -1,0 +1,19 @@
+@use "../abstracts" as *;
+.header {
+  &__container {
+    padding-block: em(24);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    @include screen(sm) {
+      padding-block: em(40);
+    }
+    @include screen(xl) {
+      padding-block: em(35);
+    }
+    @include screen(xx) {
+      padding-block: em(50);
+    }
+  }
+}
