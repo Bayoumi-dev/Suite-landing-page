@@ -1,2 +1,115 @@
 // Use: breakpoints, variables, function, helpers, mixin
 @use "../abstracts" as *;
+// Hero Section
+.hero {
+  &__container {
+    padding-block: em(60) em(56);
+    @include screen(md) {
+      padding-block: em(100) em(92);
+    }
+    @include screen(xl) {
+      padding-bottom: em(294);
+      display: flex;
+    }
+    @include screen(xx) {
+      padding-top: em(120);
+    }
+  }
+  &__content {
+    position: relative;
+    @include screen(sm) {
+      margin-bottom: em(128);
+    }
+    @include screen(xl) {
+      margin-bottom: 0;
+      flex-basis: 75%;
+    }
+  }
+  &__heading {
+    &--cl {
+      position: relative;
+      &::before {
+        content: "";
+        position: absolute;
+        top: -0.8em;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url("../assets/pattern-curved-line-1.svg") no-repeat;
+        background-size: contain;
+      }
+    }
+  }
+  p {
+    margin-block: rem(32);
+    @include screen(sm) {
+      max-width: em(350);
+      margin-block: rem(40);
+    }
+    @include screen(xl) {
+      max-width: em(300);
+      margin-bottom: rem(52);
+    }
+  }
+  &__img-wrapper {
+    width: fit-content;
+    display: block;
+    margin-inline: auto;
+    margin-block: em(56);
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    @include screen(md) {
+      margin-block: 0;
+      position: absolute;
+      height: em(482);
+      top: -30%;
+      right: 0;
+      z-index: -1;
+    }
+    @include screen(xl) {
+      height: em(600);
+      top: -25%;
+    }
+  }
+  &__stats {
+    text-align: center;
+    @include screen(sm) {
+      display: flex;
+      justify-content: space-evenly;
+    }
+    @include screen(xl) {
+      flex-direction: column;
+      align-items: center;
+      justify-content: unset;
+      flex-basis: 25%;
+      text-align: left;
+      margin-top: 6px;
+    }
+    & > *:not(:last-of-type) {
+      margin-bottom: em(32);
+      @include screen(xl) {
+        margin-bottom: em(64);
+      }
+    }
+  }
+  &__stat-num {
+    font: {
+      size: rem(48);
+      weight: var(--fonts-wg-bold);
+    }
+    color: var(--colors-dark-blue);
+    display: block;
+    @include screen(xl) {
+      margin-bottom: 6px;
+    }
+  }
+  &__stat-name {
+    font: {
+      size: rem(16);
+      weight: var(--fonts-wg-regular);
+    }
+    letter-spacing: em(2.5);
+  }
+}
