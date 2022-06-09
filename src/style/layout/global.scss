@@ -1,8 +1,16 @@
 @use "../abstracts" as *;
 html {
   scroll-behavior: smooth;
+  @include screen(tx) {
+    font-size: 1.2rem;
+  }
 }
 body {
   background-color: var(--colors-cream-white);
 }
-
+main {
+  min-height: calc(100vh - 409px);
+}
+a.logo {
+  line-height: 0;
+}

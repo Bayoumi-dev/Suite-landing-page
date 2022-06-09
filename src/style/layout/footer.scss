@@ -1,0 +1,47 @@
+@use "../abstracts" as *;
+.footer {
+  position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: em(640);
+    background-color: var(--colors-cream);
+    z-index: -1000;
+    @include screen(xl) {
+      height: em(464);
+    }
+  }
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 33px;
+    padding-block: em(56) em(80);
+    @include screen(sm) {
+      flex-direction: row;
+      justify-content: space-between;
+      padding-block: em(72);
+    }
+    @include screen(sm) {
+      padding-top: 95px;
+    }
+  }
+  &__social-list {
+    display: flex;
+    column-gap: 28px;
+  }
+  &__social {
+    img {
+      transition: 0.3s;
+      &:hover {
+        opacity: 0.5;
+      }
+    }
+    a {
+      line-height: 0;
+    }
+  }
+}
