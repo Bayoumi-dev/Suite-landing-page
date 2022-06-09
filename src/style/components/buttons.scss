@@ -1,0 +1,46 @@
+@use "../abstracts" as *;
+.btn {
+  border-radius: em(6);
+  &.prim {
+    background-color: var(--colors-dark-blue);
+    color: var(--colors-cream);
+    padding: rem(14) rem(32);
+    &:hover {
+      background-image: linear-gradient(
+        135deg,
+        var(--colors-purple) 0%,
+        var(--colors-violet) 49.21%,
+        var(--colors-orange) 100%
+      );
+    }
+    &:active {
+      background-size: 300%;
+      background-position: 200%;
+    }
+    @include screen(xs, max) {
+      font-size: rem(16);
+    }
+  }
+  &.sec {
+    color: var(--colors-dark-blue);
+    font-size: rem(14);
+    padding: em(12) em(16);
+    border: em(1) solid var(--colors-dark-blue);
+    transition: background-color 0.3s, color 0.3s;
+    &:hover {
+      background-color: var(--colors-dark-blue);
+      color: var(--colors-cream-white);
+    }
+    &:active {
+      background-color: var(--colors-gray-blue);
+      
+    }
+    @include screen(sm) {
+      font-size: rem(16);
+      padding: em(12) em(24);
+    }
+    @include screen(xs, max) {
+      font-size: rem(12);
+    }
+  }
+}
