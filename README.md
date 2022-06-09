@@ -33,11 +33,11 @@ This is a solution to the [Suite landing page challenge on Frontend Mentor](http
 ## Install
 
 ### How it works
-###### After clone the project or download ZIP
+Clone the project or download ZIP
 ```bash
 git clone https://github.com/Bayoumi-dev/Suite-landing-page.git
 ```
-###### You must install `Node js` on the local machine, then install the [`dependencies`](package.json) used in this project. Run the command in the root
+You must install `Node js` on the local machine, then install the [`dependencies`](package.json) used in this project. Run the command in the root
 ```bash
 npm install
 ```
