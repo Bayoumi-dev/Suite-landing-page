@@ -113,3 +113,102 @@
     letter-spacing: em(2.5);
   }
 }
+
+// Testimony Section
+.testimony {
+  color: white;
+  text-align: center;
+  &__container {
+    background-color: var(--colors-dark-blue);
+    padding-block: em(338) em(64);
+    margin-top: em(180);
+    border-radius: em(15);
+    position: relative;
+    @include screen(sm) {
+      padding-inline: em(58);
+    }
+    @include screen(xl) {
+      min-height: em(545);
+      text-align: left;
+      margin-top: 0;
+      padding-block: em(88);
+      padding-left: em(634);
+      padding-right: em(115);
+    }
+  }
+  blockquote {
+    margin-block: rem(40) rem(45);
+    color: var(--colors-cream);
+  }
+  &__author-pic {
+    position: absolute;
+    top: em(-180);
+    left: 50%;
+    line-height: 0;
+    transform: translateX(-50%);
+    @include screen(xl) {
+      top: initial;
+      bottom: 0;
+      left: em(123);
+      transform: none;
+    }
+    picture {
+      position: relative;
+      z-index: 1;
+      height: em(395);
+      img {
+        height: 100%;
+      }
+      &::before {
+        content: "";
+        @include circle(em(150));
+        background: var(--colors-violet);
+        filter: blur(100px);
+        opacity: 0.8;
+        position: absolute;
+        bottom: em(60);
+        left: 50%;
+        z-index: -1;
+        transform: translateX(-50%);
+        @include screen(xl) {
+          @include circle(em(254));
+          bottom: em(40);
+        }
+      }
+      &::after {
+        content: "";
+        width: em(50);
+        height: em(40);
+        position: absolute;
+        bottom: em(-80);
+        left: 50%;
+        transform: translateX(-50%);
+        background: url("../assets/pattern-curved-line-2.svg") no-repeat;
+        background-size: contain;
+        @include screen(xl) {
+          width: em(64);
+          height: em(52);
+          top: 35%;
+          right: em(-94);
+          left: inherit;
+          bottom: inherit;
+          transform: none;
+        }
+      }
+      @include screen(xl) {
+        height: em(590);
+      }
+    }
+  }
+  &__autor {
+    font-size: rem(18);
+    text-transform: uppercase;
+    letter-spacing: em(-0.18);
+    display: block;
+    margin-bottom: em(8);
+  }
+  &__autor-info {
+    color: var(--colors-cream);
+    letter-spacing: em(2.5);
+  }
+}
