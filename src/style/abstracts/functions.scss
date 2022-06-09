@@ -1,0 +1,25 @@
+@use "sass:math";
+// --- Unit conversion ---
+// Pixel to em(time)
+@function em($px) {
+  @if math.is-unitless($px) {
+    @return calc($px / 16) + em;
+  } @else {
+    @error 'Error, Pixel number only';
+  }
+}
+// Pixel to rem(root time)
+@function rem($px) {
+  @if math.is-unitless($px) {
+    @return calc($px / 16) + rem;
+  } @else {
+    @error 'Error, Pixel number only';
+  }
+}
+@function line-hg($lineHeightPx, $fontSizePX) {
+  @if math.is-unitless($lineHeightPx) and math.is-unitless($fontSizePX) {
+    @return calc($lineHeightPx / $fontSizePX);
+  } @else {
+    @error 'Error, Pixel number only';
+  }
+}

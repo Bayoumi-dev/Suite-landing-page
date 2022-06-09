@@ -1,0 +1,13 @@
+@mixin circle($dimensions) {
+  width: $dimensions;
+  height: $dimensions;
+  border-radius: 50%;
+}
+@mixin overlay($bg-color, $alpha) {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($bg-color, $alpha);
+}

@@ -1,0 +1,22 @@
+@use "../abstracts" as *;
+/* Container */
+.container {
+  width: 100%;
+  padding-inline: em(16);
+  margin-left: auto;
+  margin-right: auto;
+
+  @include screen(sm) {
+    padding-inline: em(32);
+  }
+  @include screen(md) {
+    width: em(689);
+    padding-inline: 0;
+  }
+  @include screen(lg) {
+    width: em(892);
+  }
+  @include screen(xl) {
+    width: em(1110);
+  }
+}

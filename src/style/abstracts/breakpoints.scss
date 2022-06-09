@@ -1,0 +1,22 @@
+@use "../abstracts/functions.scss" as *;
+$breakpoints: (
+  "xs": em(375),  // X-Small(xs): Phones
+  "sm": em(576),  // Small(sm): Landscape Phones
+  "md": em(768),  // Mid(md): Tablets
+  "lg": em(992),  // Larg(lg): Landscape Tablets
+  "xl": em(1200), // x-Larg(xl): Desktops
+  "xx": em(1400), // XX-Larg(xx): large desktops
+  "tx": em(1600), // XXX-Larg(tx): larger desktops
+);
+
+@mixin screen($size, $minmax: min) {
+  @if $minmax == max {
+    @media (max-width: calc(map-get($breakpoints, $size) - em(0.05))) {
+      @content;
+    }
+  } @else if $minmax == min {
+    @media (min-width: map-get($breakpoints, $size )) {
+      @content;
+    }
+  }
+}

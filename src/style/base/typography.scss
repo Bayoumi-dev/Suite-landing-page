@@ -1,0 +1,77 @@
+@use "../abstracts" as *;
+
+// Google Font - Epilogue
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:wght@400;700&display=swap");
+
+// Typographys
+body {
+  font-family: var(--fonts-fm);
+  color: var(--colors-gray-blue);
+}
+h1 {
+  font-size: rem(38);
+  line-height: line-hg(44, 38);
+  letter-spacing: rem(-1);
+  color: var(--colors-dark-blue);
+  span:not(.hero__heading--cl) {
+    font-weight: var(--fonts-wg-regular);
+  }
+  @include screen(sm) {
+    font-size: rem(56);
+    line-height: line-hg(64, 56);
+    letter-spacing: rem(-0.5);
+  }
+  @include screen(lg) {
+    font-size: rem(72);
+    line-height: line-hg(78, 72);
+  }
+}
+h2 {
+  font-size: rem(40);
+  line-height: line-hg(48, 40);
+  letter-spacing: rem(-0.5);
+  span {
+    font-weight: var(--fonts-wg-regular);
+  }
+  @include screen(lg) {
+    font-size: rem(48);
+    line-height: line-hg(56, 48);
+  }
+}
+p {
+  font-size: rem(16);
+  line-height: line-hg(26, 16);
+  font-weight: var(--fonts-wg-regular);
+  @include screen(xx) {
+    font-size: rem(18);
+    line-height: line-hg(32, 18);
+  }
+}
+blockquote {
+  font-size: rem(18);
+  line-height: line-hg(32, 18);
+  font-weight: var(--fonts-wg-regular);
+  letter-spacing: rem(0.1);
+  p {
+    font: {
+      size: inherit;
+      weight: inherit;
+    }
+    line-height: inherit;
+    letter-spacing: inherit;
+  }
+  @include screen(lg) {
+    font-size: rem(20);
+    line-height: line-hg(35, 20);
+  }
+}
+small {
+  font-size: rem(15);
+  line-height: line-hg(32, 15);
+  font-weight: var(--fonts-wg-regular);
+}
+a {
+  font-size: rem(18);
+  line-height: line-hg(32, 18);
+  font-weight: var(--fonts-wg-bold);
+}
