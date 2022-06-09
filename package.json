@@ -1,0 +1,19 @@
+{
+  "name": "suite-landing-page",
+  "version": "1.0.0",
+  "description": "\"This is a solution to the Suite landing page challenge on Frontend Mentor.\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Bayoumi-dev/Suite-landing-page.git"
+  },
+  "author": "Bayoumi.dev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Bayoumi-dev/Suite-landing-page/issues"
+  },
+  "homepage": "https://github.com/Bayoumi-dev/Suite-landing-page#readme"
+}

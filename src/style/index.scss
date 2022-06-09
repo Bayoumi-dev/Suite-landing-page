@@ -1,0 +1,12 @@
+// Use: breakpoints, variables, function, helpers, mixin
+@use "./abstracts" as *;
+// Base: normalize style, reset, typography
+@use "./base";
+// Layout: Global, Container, Header, Footer
+@use "./layout";
+// All components
+@use "./components";
+// Landing page(Home)
+@use "./pages";
+
+
