@@ -118,6 +118,10 @@
 .testimony {
   color: white;
   text-align: center;
+  overflow: hidden;
+  @include screen(xl) {
+    overflow: visible;
+  }
   &__container {
     background-color: var(--colors-dark-blue);
     padding-block: em(338) em(64);
@@ -128,6 +132,7 @@
       padding-inline: em(58);
     }
     @include screen(xl) {
+      overflow: visible;
       min-height: em(545);
       text-align: left;
       margin-top: 0;
